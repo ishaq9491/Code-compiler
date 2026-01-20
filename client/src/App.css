@@ -1,0 +1,71 @@
+/* ===== App Container ===== */
+.App {
+  text-align: center;
+  background-color: #1a2e1a;
+  /* dark green background */
+  min-height: 100vh;
+  color: #fefce8;
+  /* soft white-yellow text */
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ===== Logo Styling ===== */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+  animation: App-logo-spin infinite 20s linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .App-logo {
+    animation: none;
+  }
+}
+
+/* ===== Header Styling ===== */
+.App-header {
+  background-color: #2d3e2f;
+  /* slightly lighter green */
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.App-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fefce8;
+}
+
+.App-header p {
+  font-size: 1.1rem;
+  color: #d9f99d;
+  /* light yellow-green */
+}
+
+/* ===== Link Styling ===== */
+.App-link {
+  color: #facc15;
+  /* yellow-400 */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.App-link:hover {
+  color: #f97316;
+  /* orange-500 */
+}
+
+/* ===== Logo Animation ===== */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
