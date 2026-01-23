@@ -1,6 +1,6 @@
-# ⚡ Online Code Editor & Compiler
+# ⚡ Code Editor
 
-A modern **online code editor** that supports **multiple programming languages**, **live web preview**, and **real-time code execution**.  
+A modern **code editor** that supports **multiple programming languages**, **live web preview**, and **real-time code execution**.  
 Built using **React + Monaco Editor** with a clean UI and smooth developer experience.
 
 ---
@@ -11,7 +11,7 @@ Built using **React + Monaco Editor** with a clean UI and smooth developer exper
 - Python  
 - Java  
 - C / C++  
-- JavaScript (Node.js)  
+- JavaScript 
 - HTML  
 - CSS  
 - JavaScript (Browser)
@@ -69,5 +69,4 @@ Built using **React + Monaco Editor** with a clean UI and smooth developer exper
 
 ---
 
-## 📂 Project Structure
 
