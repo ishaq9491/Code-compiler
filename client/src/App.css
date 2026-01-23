@@ -1,0 +1,288 @@
+/* ================== ROOT ================== */
+:root {
+  --bg-main: #0d0d0f;
+  --bg-surface: #141417;
+  --bg-elevated: #18181b;
+
+  --accent: #facc15;
+  --accent-hover: #fde047;
+  --accent-soft: rgba(250, 204, 21, 0.18);
+
+  --danger: #dc2626;
+  --danger-dark: #991b1b;
+
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+
+  --border: #262626;
+  --radius: 12px;
+  --radius-sm: 8px;
+
+  --shadow-soft: 0 8px 25px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 0 2px var(--accent-soft);
+}
+
+/* ================== GLOBAL ================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: radial-gradient(circle at top, #121212, var(--bg-main));
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+/* ================== APP ================== */
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* ================== HEADER ================== */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.header h1 {
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.5px;
+}
+
+.header p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-top: 0.4rem;
+}
+
+/* ================== LANGUAGE BAR ================== */
+.lang-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.3rem;
+}
+
+.lang,
+.fs-btn,
+.delete-btn {
+  padding: 0.45rem 0.95rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Language Buttons */
+.lang {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.lang:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.lang.active {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+}
+
+/* Fullscreen */
+.fs-btn {
+  margin-left: auto;
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.fs-btn:hover {
+  background: var(--accent-soft);
+}
+
+/* ================== EDITOR ================== */
+.editor-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.6rem;
+}
+
+/* ================== INPUT ================== */
+.input-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.input-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.input-card textarea {
+  width: 100%;
+  min-height: 95px;
+  background: #0b0b0b;
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.7rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+}
+
+.input-card textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.input-card.highlight {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ================== BUTTONS ================== */
+.run-btn,
+.clear-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: none;
+}
+
+/* Run */
+.run-btn {
+  background: var(--accent);
+  color: #000;
+}
+
+.run-btn:hover {
+  background: var(--accent-hover);
+}
+
+.run-btn.disabled,
+.run-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Clear */
+.clear-btn {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--border);
+}
+
+.clear-btn:hover {
+  border-color: var(--accent);
+  background: rgba(250, 204, 21, 0.08);
+}
+
+/* ================== DELETE BUTTON ================== */
+.delete-btn {
+  background: linear-gradient(135deg, var(--danger-dark), var(--danger));
+  color: #fff;
+  border: 1px solid var(--danger-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.delete-btn:hover {
+  background: linear-gradient(135deg, #b91c1c, #ef4444);
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.45);
+  transform: translateY(-1px);
+}
+
+.delete-btn:active {
+  transform: scale(0.95);
+}
+
+/* ================== OUTPUT ================== */
+.output-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 1.6rem;
+}
+
+.output-card h3 {
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+  color: var(--accent);
+}
+
+.output-card pre {
+  background: #0b0b0b;
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  min-height: 140px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  white-space: pre-wrap;
+  border: 1px solid var(--border);
+}
+
+/* ================== HISTORY ================== */
+.history-card {
+  margin-top: 1.8rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 1px solid var(--border);
+}
+
+.history-item:hover {
+  background: rgba(250, 204, 21, 0.05);
+  color: var(--accent);
+}
+
+/* ================== SCROLLBAR ================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ================== FULLSCREEN ================== */
+.fullscreen {
+  max-width: 100%;
+}
